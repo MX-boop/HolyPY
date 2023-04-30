@@ -13,4 +13,4 @@ if userinput == 1:
 elif userinput == 2:
     call(["python", "Games/MadLibs.py"])
 elif userinput == 3:
-    call(["python", "Games/MadLibs.py"])
+    call(["python", "Games/RandomFact.py"])
