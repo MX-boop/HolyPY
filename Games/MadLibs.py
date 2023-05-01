@@ -1,5 +1,5 @@
 def takeinput(mes: str):
-    input(print(mes))
+    input(mes)
 
 
 MadArray = [takeinput(mes="Verb-ing"), takeinput(mes="Adverb"), takeinput(mes="Adjective"), takeinput(mes="Verbing"), takeinput(mes="First Names"), takeinput(mes="First Name"), takeinput(mes="First Name"), takeinput(mes="Place"), takeinput(mes="Adj"), takeinput(mes="Noun"), takeinput(mes="Color"), takeinput(mes="Noun"), takeinput(mes="Verb"), takeinput(mes="Food"), takeinput(mes="Food"), takeinput(mes="Verb"), takeinput(mes="Verb"), takeinput(mes="Part of body"), takeinput(mes="Animal"), takeinput(mes="Verb"), takeinput(mes="Noun"), takeinput(mes="Verb-ing"), takeinput("Verb-ing"), takeinput(mes="Verb-ing"), takeinput(mes="Adj")]
