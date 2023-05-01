@@ -1,4 +1,4 @@
-﻿import uuid
+import uuid
 import time
 import random
 import sys
@@ -14,10 +14,6 @@ def printProgressBar(iteration, total, prefix="", suffix="", decimals=1, length=
 
 
 def Print(number: int):
-    colors = [
-        "\033[37m"   # white
-    ]
-    
     messages = [
         "Successfully cloned into ",
         "Error: Failed to clone into ",
@@ -46,20 +42,18 @@ def Print(number: int):
     for i in range(1, number+1):
         message = random.choices(messages, weights=[10, 2, 8, 10, 3, 7, 10, 1, 3], k=1)[0]
         url = random.choice(urls)
-        teal_color_code = random.choice(colors)
-        url_color_code = random.choice(colors)
-        deep_teal_color_code = random.choice(colors)
+        White_Color_Code = "\033[37m"
         reset_color_code = "\033[0m"
         uuid_str = str(uuid.uuid4())
         
         if "Error" in message:
             message_color_code = "\033[31m"
         else:
-            message_color_code = teal_color_code
+            message_color_code = White_Color_Code
             
-        print(f"{message_color_code}{message}{url_color_code}{url}{reset_color_code}{deep_teal_color_code}{uuid_str}{reset_color_code}")
+        print(f"{message_color_code}{message}{White_Color_Code}{url}{White_Color_Code}{uuid_str}")
         
-        # progress bar with varying speeds occasionally
+        # progress bar with varying speeds
         if random.random() < 0.3:
             for j in range(101):
                 speed = random.uniform(0.001, 0.001)  # speed
@@ -71,7 +65,7 @@ def Print(number: int):
         
         # terminal animation
         if random.random() < 0.3:
-            print(f"{teal_color_code}Working...{reset_color_code}", end="", flush=True)
+            print(f"{White_Color_Code}Working...{reset_color_code}", end="", flush=True)
             time.sleep(0.3)
             print("\b")
 
