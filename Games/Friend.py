@@ -19,7 +19,7 @@ def load_animation():
     # pointer for travelling the loading string
     i = 0                     
   
-    while (counttime != 100):
+    while (counttime != 10000):
           
         time.sleep(0.075) 
                               
