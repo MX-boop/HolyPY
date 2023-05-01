@@ -8,7 +8,7 @@ import os
   
 def load_animation():
   
-    load_str = "starting your console application..."
+    load_str = "waiting for friend..."
     ls_len = len(load_str)
  
     animation = "|/-\\"
@@ -19,7 +19,7 @@ def load_animation():
     # pointer for travelling the loading string
     i = 0                     
   
-    while (counttime != 10000):
+    while (counttime != 10):
           
         time.sleep(0.075) 
                               
@@ -67,4 +67,4 @@ def load_animation():
 if __name__ == '__main__': 
     load_animation()
     
-
+print("ERROR: 404: friend not found")
