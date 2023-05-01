@@ -6,20 +6,14 @@ import time
 import sys
 import os
   
-# Function for implementing the loading animation
 def load_animation():
   
-    # String to be displayed when the application is loading
     load_str = "starting your console application..."
     ls_len = len(load_str)
-  
-  
-    # String for creating the rotating line
+ 
     animation = "|/-\\"
     anicount = 0
       
-    # used to keep the track of
-    # the duration of animation
     counttime = 0        
       
     # pointer for travelling the loading string
@@ -27,22 +21,16 @@ def load_animation():
   
     while (counttime != 100):
           
-        # used to change the animation speed
-        # smaller the value, faster will be the animation
         time.sleep(0.075) 
                               
-        # converting the string to list
-        # as string is immutable
+        
         load_str_list = list(load_str) 
           
-        # x->obtaining the ASCII code
         x = ord(load_str_list[i])
           
         # y->for storing altered ASCII code
         y = 0                             
   
-        # if the character is "." or " ", keep it unaltered
-        # switch uppercase to lowercase and vice-versa 
         if x != 32 and x != 46:             
             if x>90:
                 y = x-32
@@ -76,11 +64,7 @@ def load_animation():
     else:
         os.system("clear")
   
-# Driver program
 if __name__ == '__main__': 
     load_animation()
-  
-    # Your desired code continues from here 
-    # s = input("Enter your name: ")
-    s ="David"
-    sys.stdout.write("Hello "+str(s)+"\n")
+    
+
