@@ -70,9 +70,12 @@ print("Game Options")
 print()
 print("1--QuantumTool")
 print("2--Mad Libs")
-print("3--RandomFact")
+print("3--Random Fact")
 print("4--Friend")
+print("5--Guessing Game")
+print("6--Pig Latin Translater")
 print()
+print("7--Exit")
 userinput = int(input("What Game Would You Like To Play(Number)"))
 if userinput == 1:
     call(["python3", "Games/QuantumTool.py"])
@@ -82,3 +85,9 @@ elif userinput == 3:
     call(["python3", "Games/RandomFact.py"])
 elif userinput == 4:
     call(["python3", "Games/Friend.py"])
+elif userinput == 5:
+    call(["python3", "Games/GuessingGame.py"])
+elif userinput == 6:
+    call(["python3", "Games/PigLatinTranslater"])
+elif userinput == 7:
+    print("Exiting, Thank you")
