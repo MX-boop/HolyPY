@@ -21,4 +21,4 @@ print("Good job! You win. The number was: "+str(RanNumber))
 
 time.sleep(2)
 if input("Would you like to restart. [Y,N]: ") == "Y":
-    subprocess.call(["python3", "../main.py"])
+    subprocess.call(["python3", "main.py"])
