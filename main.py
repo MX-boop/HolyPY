@@ -88,6 +88,6 @@ elif userinput == 4:
 elif userinput == 5:
     call(["python3", "Games/GuessingGame.py"])
 elif userinput == 6:
-    call(["python3", "Games/PigLatinTranslater"])
+    call(["python3", "Games/PigLatinTranslater.py"])
 elif userinput == 7:
     print("Exiting, Thank you")

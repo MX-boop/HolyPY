@@ -1,4 +1,6 @@
 import requests
+import time
+import subprocess
 
 url = "https://facts-by-api-ninjas.p.rapidapi.com/v1/facts"
 
@@ -10,3 +12,7 @@ headers = {
 response = requests.get(url, headers=headers)
 
 print(response.json())
+
+time.sleep(2)
+if input("Would you like to restart. [Y,N]: ") == "Y":
+    subprocess.call(["python3", "../main.py"])

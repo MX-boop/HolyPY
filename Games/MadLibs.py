@@ -1,3 +1,6 @@
+import time
+import subprocess
+
 def takeinput(mes: str):
     return input(mes)
 
@@ -9,3 +12,7 @@ print(
         MadArray[0], MadArray[1], MadArray[2], MadArray[3], MadArray[4], MadArray[5], MadArray[6], MadArray[7],
         MadArray[8], MadArray[9], MadArray[10], MadArray[11], MadArray[12], MadArray[13], MadArray[14], MadArray[15],
         MadArray[16], MadArray[17], MadArray[18], MadArray[19], MadArray[20], MadArray[21], MadArray[22], MadArray[23]))
+
+time.sleep(2)
+if input("Would you like to restart. [Y,N]: ") == "Y":
+    subprocess.call(["python3", "../main.py"])

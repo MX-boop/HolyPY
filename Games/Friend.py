@@ -1,7 +1,7 @@
 #NOT MINE
 #from https://www.geeksforgeeks.org/python-create-simple-animation-for-console-based-application/
 
-
+import subprocess
 import time
 import sys
 import os
@@ -68,3 +68,9 @@ if __name__ == '__main__':
     load_animation()
     
 print("ERROR: 404: friend not found")
+
+time.sleep(2)
+if input("Would you like to restart. [Y,N]: ") == "Y":
+    subprocess.call(["python3", "../main.py"])
+else:
+    print("Have a good day! PS: I will be your friend! :)")

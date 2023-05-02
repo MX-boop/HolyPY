@@ -2,6 +2,7 @@ import uuid
 import time
 import random
 import sys
+import subprocess
 
 def printProgressBar(iteration, total, prefix="", suffix="", decimals=1, length=100, fill="█", printEnd="\r"):
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
@@ -70,3 +71,7 @@ def Print(number: int):
             print("\b")
 
 Print(number=500)
+
+time.sleep(2)
+if input("Would you like to restart. [Y,N]: ") == "Y":
+    subprocess.call(["python3", "../main.py"])

@@ -1,3 +1,6 @@
+import time
+import subprocess
+
 print("Welcome To Pig Latin Translater")
 print("Please enter the sentances you would like to translate")
 UserInput = input("(Words)")
@@ -14,3 +17,7 @@ for i in range(len(Word_List)):
     Word_List[i] = (Word_List[i]+"ay")
     FinOutput = FinOutput + Word_List[i]+" "
 print(FinOutput)
+
+time.sleep(2)
+if input("Would you like to restart. [Y,N]: ") == "Y":
+    subprocess.call(["python3", "../main.py"])
