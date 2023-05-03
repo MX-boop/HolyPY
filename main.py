@@ -97,6 +97,6 @@ elif userinput == 7:
 elif userinput == 8:
     call(["python3", "Games/Encoder.py"])
 elif userinput == 9:
-    call(["python3", "Games/Decoderr.py"])
+    call(["python3", "Games/Decoder.py"])
 elif userinput == 10:
     print("Exiting, Thanks For Playing")
