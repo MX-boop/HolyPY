@@ -30,7 +30,7 @@ for i in range(len(Word_List)):
     WordTemp = ''
 
 for i in range(len(Encoded)):
-    Word_Final += Encoded[i]
+    Word_Final += Encoded[i] + " "
 
 print(Word_Final)
 print(Key_List)
