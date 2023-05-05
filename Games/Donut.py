@@ -1,6 +1,8 @@
+#not mine :)
 import os
 from math import cos, sin
-import pygame
+import pygame 
+#Best module ever
 import colorsys
 
 WHITE = (255, 255, 255)
