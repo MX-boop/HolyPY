@@ -1,26 +1,67 @@
-print("Does Not Work")
 import string
 
+
+
+print("Welcome To Decoder")
+print("Enter Message")
+usermessage = input("(String): ")
+
+MasterKey = int(input("Please Enter The Master Key"))
+Word_List = usermessage.split()
+Key_List = (input("Please Enter You Key List")).split()
+Decoded = []
+Letters = list(string.ascii_letters)
+
+for i in range(len(Key_List)):
+    Key_List[i] = int("-" + str(Key_List[i]))#I Know This Is Ugly
+
 def ListOffset(Amt: int, Offset_List: list):
-    Letters = list(string.ascii_lowercase)
     for i in range(len(Letters)):
         Offset_Index = (i + Amt) % len(Letters)
         Offset_List.append(Letters[Offset_Index])
 
-def CeaserDecrypter(Key: int, Encrypted_Word: str):
-    Offset_List = []
-    Decrypted_Word = ''
-    ListOffset(Amt=Key, Offset_List=Offset_List)
-    for b in range(len(Encrypted_Word)):
-        Decrypted_Word += string.ascii_lowercase[Offset_List.index(Encrypted_Word[b])]
-    return Decrypted_Word
+def CeaserCypher(Keys: list, Words: list, Output: list,):
 
-def Decrypter(Encoded: list, Key_List: list):
+    StartLenWords = len(Words)
+    Temp = ""
+    Temp2 = ""
+
+    for i in range(StartLenWords): #Loops Through Every Word
+
+        Offset_List = [] #Creates a dummy list for offsets
+
+        ListOffset(Amt=Keys[i], Offset_List=Offset_List) #Creates a Offseted list for the word
+
+        for b in range(len(Words[i])):
+            Temp = Temp + Offset_List[Letters.index(Words[i][b])] #Loops Through Every Letter to ceaser Cypher
+
+        Output.append(Temp) #Adds the word to the output
+        Temp = '' #Resets the Temp
+
+for i in range(MasterKey):
+
+    TempList = []
+
+    CeaserCypher(Keys=Key_List, Words=Word_List, Output=Decoded)
+
+    Word_List = []
+
+    for b in range(len(Decoded)):
+        Word_List.append(Decoded[b]) #Sets Word List To Encoded
+
     Decoded = []
-    for i in range(len(Encoded)):
-        Key = Key_List[-i-1] # reverse order of keys
-        Decoded_Word = CeaserDecrypter(Key=Key, Encrypted_Word=Encoded[i][::-1]) # reverse order of words
-        Decoded.append(Decoded_Word)
-    return ' '.join(Decoded[::-1]) # reverse order of final message
 
-Keys1 = input("Enter Your First Key List").split
+    for b in range(len(Word_List)):
+        TempList.append(Word_List[b][::-1])
+
+    Word_List = []
+
+    for b in range(len(TempList)):
+        Word_List.append(TempList[b])
+
+Word_Final = ""
+
+for i in range(len(Word_List)):
+    Word_Final += Word_List[i] + " "
+
+print(Word_Final)
