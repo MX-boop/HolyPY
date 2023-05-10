@@ -10,6 +10,15 @@ def clear():
     else:
         os.system("clear")
 
+def PrintXY(Xcrd: int, Ycrd: int):
+    for a in range(10):
+        for b in range(20):
+            if (f"{b},{a}"):
+                print("\033[33m#\033[0m", end="")
+            else:
+                print(" ", end="")
+        print()
+
 def PrintList(coords: list):
     for a in range(10):
         for b in range(20):
@@ -89,8 +98,7 @@ def Message1():
 
     print()
     print("""
-    <--Nikola Tesla                                                   War Of Currents-->
-    """)
+    <--Nikola Tesla                                                   War Of Currents-->""")
 
 Pointer = True
 
@@ -132,13 +140,11 @@ else:
     """)
     PrintSlope(slope = 0.5)
 
-FinalCoords = [(5, 5)]
+UsrXcrd = 5
+UsrYcrd = 5
 
 while Running:
-    UsrXcrd = int(FinalCoords[0])[1]
-    UsrYcrd = int(FinalCoords[0])[4]
-    PrintList(coords = FinalCoords)
-    FinalCoords = []
+    PrintXY(Xcrd = UsrXcrd, Ycrd = UsrYcrd)
     print()
     print("WSAD")
     UsrControl = input
@@ -152,5 +158,4 @@ while Running:
     elif UsrControl == "a":
         UsrXcrd += -1
 
-    FinalCoords.append(f"{UsrXcrd}, {UsrYcrd}")
     clear()
