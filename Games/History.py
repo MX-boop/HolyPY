@@ -18,6 +18,17 @@ def PrintList(coords: list):
             else:
                 print(" ", end = "")
         print()
+
+SlopeCoords = []
+Ycoord = ""
+
+def PrintSlope(slope: int):
+    for i in range(10):
+        Ycoord = slope*i
+        SlopeCoords.append(f"{i}, {Ycoord}")
+        Ycoord = ""
+    PrintList(coords = SlopeCoords)
+
 LightBlubOff = f"""
            ______
        .-~~^^^^^^~~-.
@@ -107,3 +118,39 @@ while Running == True:
             Pointer = False
         else:
             Pointer = True
+
+clear()
+
+if Pointer:
+    print("""
+    #thing abt nic tesla
+    """)
+    PrintSlope(slope = 2)
+else:
+    print("""
+    #thing abt war of currents
+    """)
+    PrintSlope(slope = 0.5)
+
+FinalCoords = [(5, 5)]
+
+while Running:
+    UsrXcrd = int(FinalCoords[0])[1]
+    UsrYcrd = int(FinalCoords[0])[4]
+    PrintList(coords = FinalCoords)
+    FinalCoords = []
+    print()
+    print("WSAD")
+    UsrControl = input
+
+    if UsrControl == "w": #Changes Usr Cords For WSAD input
+        UsrYcrd += -1
+    elif UsrControl == "s":
+        UsrYcrd += 1
+    elif UsrControl == "d":
+        UsrXcrd += 1
+    elif UsrControl == "a":
+        UsrXcrd += -1
+
+    FinalCoords.append(f"{UsrXcrd}, {UsrYcrd}")
+    clear()
