@@ -13,7 +13,7 @@ def clear():
 def PrintXY(Xcrd: int, Ycrd: int):
     for a in range(10):
         for b in range(20):
-            if (f"{b},{a}"):
+            if Xcrd == b and Ycrd == a:
                 print("\033[33m#\033[0m", end="")
             else:
                 print(" ", end="")
@@ -144,10 +144,13 @@ UsrXcrd = 5
 UsrYcrd = 5
 
 while Running:
+
+    clear()
+
     PrintXY(Xcrd = UsrXcrd, Ycrd = UsrYcrd)
     print()
     print("WSAD")
-    UsrControl = input
+    UsrControl = input("Control: ")
 
     if UsrControl == "w": #Changes Usr Cords For WSAD input
         UsrYcrd += -1
@@ -157,5 +160,3 @@ while Running:
         UsrXcrd += 1
     elif UsrControl == "a":
         UsrXcrd += -1
-
-    clear()
