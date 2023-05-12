@@ -157,7 +157,26 @@ while Running == True:
         MessageSel()
     elif user_input == "C":
         print("""
-        Citations""")
+        "Alternating Current." World of Invention, Gale, 2006. Gale in Context: Middle 
+        School, link.gale.com/apps/doc/CV1647500021/ 
+        MSIC?u=mlin_m_brimaysch&sid=bookmark-MSIC&xid=afa8aebf. Accessed 9 May 
+        2023
+        
+        "Tesla, Nikola." The Columbia Electronic Encyclopedia™, New York, NY, Columbia 
+        University Press, 2023. Gale in Context: Middle School, link.gale.com/apps/ 
+        doc/A69227246/MSIC?u=mlin_m_brimaysch&sid=bookmark-MSIC&xid=a3b3c363. 
+        Accessed 11 May 2023.
+        
+        Therien, Tania. "The War of the Currents? In the 1880s, Two of the World's Most 
+        Famous Inventors Went Head to Head in a Vicious Public Fight over 
+        Electricity. the Prize Was the Chance to Light up the World." Ask, vol. 11, 
+        no. 3, Mar. 2012, p. 14+. Gale in Context: Middle School, link.gale.com/ 
+        apps/doc/A285436482/MSIC?u=mlin_m_brimaysch&sid=bookmark-MSIC&xid=1d8203f1. 
+        Accessed 11 May 2023.
+        """)
+
+        time.sleep(10)
+
     else:
         if Pointer: # Else Toggles Pointer
             Pointer = False
