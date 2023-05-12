@@ -178,7 +178,4 @@ while Running == True:
         time.sleep(10)
 
     else:
-        if Pointer: # Else Toggles Pointer
-            Pointer = False
-        else:
-            Pointer = True
+        Pointer = !(Pointer)
