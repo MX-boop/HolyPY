@@ -105,6 +105,7 @@ Pointer = True
 def MessageSel():
     if Pointer:
         clear()
+        print(LightBlubOnn)
         print("""
         Nikola Tesla was a Serbian-American inventer who is most well known for his con
         tribution to eletrical engineering in the late 1800's. Many of his inventions w
@@ -114,11 +115,11 @@ def MessageSel():
         mitters. Technology that was pioneered by the Tesla coil is still widely used i
         n many long-range radio transmiters today.
         """)
-        PrintSlope(slope = 2)
         time.sleep(10)
 
     else:
         clear()
+        print(LightBlubOnn)
         print("""
         The War of Currents was a battle between AC and DC that occurred in the mid to l
         ate 1800's. The two main combatants in the fight were Thomas Edison(DC) and Geor
@@ -133,7 +134,6 @@ def MessageSel():
         down of the War of Currents with AC as its victor. We can still see the products
         of the battle today as AC is used to almost every type of eletric application.
         """)
-        PrintSlope(slope = 0.5)
         time.sleep(10)
 
 while Running == True:
