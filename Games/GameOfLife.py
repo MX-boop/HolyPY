@@ -3,11 +3,10 @@ import pygame
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-grid_size = (120, 80)
+grid_size = (80, 60)
 cell_size = 10
 grid = [[0] * grid_size[1] for _ in range(grid_size[0])]
 
-# Pygame Settup
 pygame.init()
 screen = pygame.display.set_mode((grid_size[0] * cell_size, grid_size[1] * cell_size))
 pygame.display.set_caption("Conway's Game of Life")
@@ -43,14 +42,15 @@ def draw_grid():
             if grid[x][y] == 1:
                 pygame.draw.rect(screen, WHITE, (x * cell_size, y * cell_size, cell_size, cell_size))
 
+running = True
+paused = False
+speed = 10
+
 # Main game loop
 # To Future MX-boop
 # this is the game loop
 # this is the only thing you want to edit
 # if you edit something else your going to break it
-
-running = True
-paused = False
 while running:
 
     for event in pygame.event.get():
@@ -59,12 +59,15 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 paused = not paused
+            elif event.key == pygame.K_UP:
+                speed += 1
+            elif event.key == pygame.K_DOWN:
+                speed = max(1, speed - 1)
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            if event.button == 1: # left click
-                x, y = event.pos
-                x //= cell_size
-                y //= cell_size
-                grid[x][y] = 1
+            x, y = pygame.mouse.get_pos()
+            x //= cell_size
+            y //= cell_size
+            grid[x][y] = 1 - grid[x][y]
 
     if not paused:
         grid = update_grid()
@@ -73,7 +76,6 @@ while running:
 
     pygame.display.flip()
 
-    clock.tick(10)
-
+    clock.tick(speed)
 
 pygame.quit()
