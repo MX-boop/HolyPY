@@ -105,6 +105,7 @@ Pointer = True
 def MessageSel():
     if Pointer:
         clear()
+        print(LightBlubOnn)
         print("""
         Nikola Tesla was a Serbian-American inventer who is most well known for his con
         tribution to eletrical engineering in the late 1800's. Many of his inventions w
@@ -114,11 +115,11 @@ def MessageSel():
         mitters. Technology that was pioneered by the Tesla coil is still widely used i
         n many long-range radio transmiters today.
         """)
-        PrintSlope(slope = 2)
         time.sleep(10)
 
     else:
         clear()
+        print(LightBlubOnn)
         print("""
         The War of Currents was a battle between AC and DC that occurred in the mid to l
         ate 1800's. The two main combatants in the fight were Thomas Edison(DC) and Geor
@@ -133,7 +134,6 @@ def MessageSel():
         down of the War of Currents with AC as its victor. We can still see the products
         of the battle today as AC is used to almost every type of eletric application.
         """)
-        PrintSlope(slope = 0.5)
         time.sleep(10)
 
 while Running == True:
@@ -157,7 +157,26 @@ while Running == True:
         MessageSel()
     elif user_input == "C":
         print("""
-        Citations""")
+        "Alternating Current." World of Invention, Gale, 2006. Gale in Context: Middle 
+        School, link.gale.com/apps/doc/CV1647500021/ 
+        MSIC?u=mlin_m_brimaysch&sid=bookmark-MSIC&xid=afa8aebf. Accessed 9 May 
+        2023
+        
+        "Tesla, Nikola." The Columbia Electronic Encyclopedia™, New York, NY, Columbia 
+        University Press, 2023. Gale in Context: Middle School, link.gale.com/apps/ 
+        doc/A69227246/MSIC?u=mlin_m_brimaysch&sid=bookmark-MSIC&xid=a3b3c363. 
+        Accessed 11 May 2023.
+        
+        Therien, Tania. "The War of the Currents? In the 1880s, Two of the World's Most 
+        Famous Inventors Went Head to Head in a Vicious Public Fight over 
+        Electricity. the Prize Was the Chance to Light up the World." Ask, vol. 11, 
+        no. 3, Mar. 2012, p. 14+. Gale in Context: Middle School, link.gale.com/ 
+        apps/doc/A285436482/MSIC?u=mlin_m_brimaysch&sid=bookmark-MSIC&xid=1d8203f1. 
+        Accessed 11 May 2023.
+        """)
+
+        time.sleep(10)
+
     else:
         if Pointer: # Else Toggles Pointer
             Pointer = False
