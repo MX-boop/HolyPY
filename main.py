@@ -68,59 +68,64 @@ if __name__ == '__main__':
 print('Welcome To A Ton Of Games')
 print("Game Options")
 print()
-print("1--QuantumTool")
-print("2--Mad Libs")
-print("3--Random Fact")
-print("4--Friend")
-print("5--Guessing Game")
-print("6--Pig Latin Translater")
-print("7--Donut")
-print("8--Encoder")
-print("9--Decoder")
-print("10--History")
-print("11--French Classroom")
-print("12--Quad Problem Solver")
+print("1--Exit")
+
+print("2--QuantumTool")
+print("3--Mad Libs")
+print("4--Random Fact")
+print("5--Friend")
+print("6--Guessing Game")
+print("7--Pig Latin Translater")
+print("8--Donut")
+print("9--Encoder")
+print("10--Decoder")
+print("11--History")
+print("12--French Classroom")
+print("13--Quad Problem Solver")
+print("14--File Creator and Editor")
 print()
-print("13--Exit")
 print()
 userinput = int(input("What Game Would You Like To Play(Number): "))
-if userinput == 1:
+if userinput == 2:
     call(["python3", "Games/QuantumTool.py"])
 
-elif userinput == 2:
+elif userinput == 3:
     call(["python3", "Games/MadLibs.py"])
 
-elif userinput == 3:
+elif userinput == 4:
     call(["python3", "Games/RandomFact.py"])
 
-elif userinput == 4:
+elif userinput == 5:
     call(["python3", "Games/Friend.py"])
 
-elif userinput == 5:
+elif userinput == 6:
     call(["python3", "Games/GuessingGame.py"])
 
-elif userinput == 6:
+elif userinput == 7:
     call(["python3", "Games/PigLatinTranslater.py"])
 
-elif userinput == 7:
+elif userinput == 8:
     call(["python3", "Games/Donut.py"])
 
-elif userinput == 8:
+elif userinput == 9:
     call(["python3", "Games/Encoder.py"])
 
-elif userinput == 9:
+elif userinput == 10:
     call(["python3", "Games/Decoder.py"])
 
-elif userinput == 10:
+elif userinput == 11:
     call(["python3", "Games/History.py"])
 
-elif userinput == 11:
+elif userinput == 12:
     call(["python3", "Games/IRFrench.py"])
 
-elif userinput == 12:
-    call(["python3", "Games/QuadProblemSolver.py"])
-    
 elif userinput == 13:
+    call(["python3", "Games/QuadProblemSolver.py"])
+
+elif userinput == 14:
+    call(["python3", "Games/FunThing.py"])
+
+elif userinput == 0:
     print("Okey, Sounds Good!")
     exit()
 
