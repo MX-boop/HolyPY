@@ -69,7 +69,7 @@ print('Welcome To A Ton Of Games')
 print("Game Options")
 print()
 print("1--Exit")
-
+print()
 print("2--QuantumTool")
 print("3--Mad Libs")
 print("4--Random Fact")
