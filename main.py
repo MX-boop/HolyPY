@@ -1,8 +1,6 @@
 from subprocess import call
 
-import time
-import sys
-import os
+import time, sys, os
   
 def load_animation():
   
@@ -10,9 +8,9 @@ def load_animation():
     ls_len = len(load_str)
  
     animation = "|/-\\"
-    anicount = 0
+    anicount = 0 # Animation Count
       
-    counttime = 0        
+    counttime = 0 # Timer - how long animation been running 
       
     # pointer for travelling the loading string
     i = 0                     
@@ -65,69 +63,90 @@ def load_animation():
 if __name__ == '__main__': 
     load_animation()
 
+GameDick = {
+    {
+        "Name": "Exit",
+        "Id": "1",
+        "File": "Games/Exit.py"
+    },
+    {
+        "Name": "QuantumTool",
+        "Id": "2",
+        "File": "Games/QuantumTool.py"
+    },
+    {
+        "Name": "Mad Libs",
+        "Id": "3",
+        "File": "Games/MadLibs.py"
+    },
+    {
+        "Name": "Random Fact",
+        "Id": "4",
+        "File": "Games/RandomFact.py"
+    },
+    {
+        "Name": "Friend",
+        "Id": "5",
+        "File": "Games/Friend.py"
+    },
+    {
+        "Name": "Guessing Game",
+        "Id": "6",
+        "File": "Games/GuessingGame.py"
+    },
+    {
+        "Name": "Pig Latin Translater",
+        "Id": "7",
+        "File": "Games/PigLatinTranslater.py"
+    },
+    {
+        "Name": "Donut",
+        "Id": "8",
+        "File": "Games/Donut.py"
+    },
+    {
+        "Name": "Encoder",
+        "Id": "9",
+        "File": "Games/Encoder.py"
+    },
+    {
+        "Name": "Decoder",
+        "Id": "10",
+        "File": "Games/Decoder.py"
+    },
+    {
+        "Name": "History",
+        "Id": "11",
+        "File": "Games/History.py"
+    },
+    {
+        "Name": "French Classroom",
+        "Id": "12",
+        "File": "Games/IRFrench.py"
+    },
+    {
+        "Name": "Quad Problem Solver",
+        "Id": "13",
+        "File": "Games/QuadProblemSolver.py"
+    },
+    {
+        "Name": "File Creator and Editor",
+        "Id": "14",
+        "File": "Games/FunThing.py"
+    }
+}
+
 print('Welcome To A Ton Of Games')
-print("Game Options")
-print()
-print("1--Exit")
-print()
-print("2--QuantumTool")
-print("3--Mad Libs")
-print("4--Random Fact")
-print("5--Friend")
-print("6--Guessing Game")
-print("7--Pig Latin Translater")
-print("8--Donut")
-print("9--Encoder")
-print("10--Decoder")
-print("11--History")
-print("12--French Classroom")
-print("13--Quad Problem Solver")
-print("14--File Creator and Editor")
-print()
-print()
-userinput = int(input("What Game Would You Like To Play(Number): "))
-if userinput == 2:
-    call(["python3", "Games/QuantumTool.py"])
+print("Game Options\n")
 
-elif userinput == 3:
-    call(["python3", "Games/MadLibs.py"])
+for i in GameDick:
+    print(i["Id"] + "--" + i["Name"])
+    
+print("\n")
+UserInput = int(input("What Game Would You Like To Play(Number): "))
 
-elif userinput == 4:
-    call(["python3", "Games/RandomFact.py"])
-
-elif userinput == 5:
-    call(["python3", "Games/Friend.py"])
-
-elif userinput == 6:
-    call(["python3", "Games/GuessingGame.py"])
-
-elif userinput == 7:
-    call(["python3", "Games/PigLatinTranslater.py"])
-
-elif userinput == 8:
-    call(["python3", "Games/Donut.py"])
-
-elif userinput == 9:
-    call(["python3", "Games/Encoder.py"])
-
-elif userinput == 10:
-    call(["python3", "Games/Decoder.py"])
-
-elif userinput == 11:
-    call(["python3", "Games/History.py"])
-
-elif userinput == 12:
-    call(["python3", "Games/IRFrench.py"])
-
-elif userinput == 13:
-    call(["python3", "Games/QuadProblemSolver.py"])
-
-elif userinput == 14:
-    call(["python3", "Games/FunThing.py"])
-
-elif userinput == 0:
-    print("Okey, Sounds Good!")
-    exit()
-
-else:
-    print("Not 100% Sure Thats An Option")
+for i in GameDick:
+    if UserInput == i["Id"]:
+        call(["python3", i["File"]])
+    else:
+        print("Not 100% Sure Thats An Option")
