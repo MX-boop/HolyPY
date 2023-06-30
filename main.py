@@ -147,6 +147,6 @@ UserInput = int(input("What Game Would You Like To Play(Number): "))
 
 for i in GameDick:
     if UserInput == i["Id"]:
-        call(["python3", i["File"]])
+        call(["python3", ["File"]])
     else:
         print("Not 100% Sure Thats An Option")
